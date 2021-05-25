@@ -1,0 +1,11 @@
+name: PFX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - run: New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("key.pfx", "")
