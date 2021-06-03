@@ -9,3 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("key.pfx", "")
+      - shell: cmd
+        run: whoami >> C:\runner-test-win-self-host\whoami.txt
